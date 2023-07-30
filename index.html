@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Candy SHOP</h2>
+    <label for="candyname">Candy Name</label>
+    <input type="text" name="" id="candyname">
+    <label for="description">Description</label>
+    <input type="text" name="" id="description">
+    <label for="price">Price</label>
+    <input type="text" name="" id="price">
+    <label for="quantity">Quantity</label>
+    <input type="text" name="" id="quantity">
+    <button id="additem">ADD ITEM</button>
+    <div class="container mt-5">
+        <table class="table-success table-bordered table">
+            <thead class="table-primary">
+                <tr class="table-success table-bordered text-xl-center">
+                    <th class="table-primary" id="candynametable">CandyName</th>
+                    <th class="table-primary">Description</th>
+                    <th class="table-primary">Price</th>
+                    <th class="table-primary">Quantity</th>
+                    <th class="table-primary">Buy one</th>
+                    <th class="table-primary">Buy two</th>
+                    <th class="table-primary">Buy three</th>
+                </tr>
+            </thead>
+            <tbody class="table-success table-bordered text-center" id="datatable">
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script src="project.js"></script>
+</body>
+
+</html>
