@@ -21,7 +21,9 @@ addItemBtn.addEventListener('click',function(){
         'quantity':quantityValue
     }
 
-    axios.post('https://crudcrud.com/api/71db2c4322e04374983706fdf4b54cdc/candydata',candyobj)
+    // showContentOnScreen(candyobj);
+
+    axios.post('https://crudcrud.com/api/1fc5f38ffc23478ba149e4d43d8b727a/candydata',candyobj)
     .then((res)=>{
         let candydata = res.data;
 
@@ -99,8 +101,11 @@ function showContentOnScreen(user){
             quantity: user.quantity - 1
         };
 
+        
+
         if(user.quantity >0){
-            axios.put(`https://crudcrud.com/api/71db2c4322e04374983706fdf4b54cdc/candydata/${candyId}`,updatedCandyData)
+            
+            axios.put(`https://crudcrud.com/api/1fc5f38ffc23478ba149e4d43d8b727a/candydata/${candyId}`,updatedCandyData)
     .then((res) => {
         let updatedQuantity = user.quantity-1;
         user.quantity = updatedQuantity;
@@ -108,6 +113,9 @@ function showContentOnScreen(user){
         
     })
     .catch((err)=>{
+        let updatedQuantity = user.quantity-1;
+        user.quantity = updatedQuantity;
+        td4.textContent = updatedQuantity;
         console.log(err);
     })
         }
@@ -129,7 +137,8 @@ function showContentOnScreen(user){
         };
 
         if(user.quantity >0){
-            axios.put(`https://crudcrud.com/api/71db2c4322e04374983706fdf4b54cdc/candydata/${candyId}`,updatedCandyData)
+            
+            axios.put(`https://crudcrud.com/api/1fc5f38ffc23478ba149e4d43d8b727a/candydata/${candyId}`,updatedCandyData)
     .then((res) => {
         let updatedQuantity = user.quantity-2;
         user.quantity = updatedQuantity;
@@ -137,6 +146,9 @@ function showContentOnScreen(user){
         
     })
     .catch((err)=>{
+        let updatedQuantity = user.quantity-2;
+        user.quantity = updatedQuantity;
+        td4.textContent = updatedQuantity;
         console.log(err);
     })
         }
@@ -157,7 +169,8 @@ function showContentOnScreen(user){
         };
 
         if(user.quantity >0){
-            axios.put(`https://crudcrud.com/api/71db2c4322e04374983706fdf4b54cdc/candydata/${candyId}`,updatedCandyData)
+            
+            axios.put(`https://crudcrud.com/api/1fc5f38ffc23478ba149e4d43d8b727a/candydata/${candyId}`,updatedCandyData)
     .then((res) => {
         let updatedQuantity = user.quantity-3;
         user.quantity = updatedQuantity;
@@ -165,6 +178,9 @@ function showContentOnScreen(user){
         
     })
     .catch((err)=>{
+        let updatedQuantity = user.quantity-3;
+        user.quantity = updatedQuantity;
+        td4.textContent = updatedQuantity;
         console.log(err);
     })
         }
@@ -181,7 +197,7 @@ function showContentOnScreen(user){
 
 document.addEventListener('DOMContentLoaded', function() {
     // DOM manipulation code to display data
-    axios.get('https://crudcrud.com/api/71db2c4322e04374983706fdf4b54cdc/candydata')
+    axios.get('https://crudcrud.com/api/1fc5f38ffc23478ba149e4d43d8b727a/candydata')
     .then((res)=>{
         console.log('loaded content',res.data);
         let candydata = res.data;
