@@ -10,36 +10,85 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>Document</title>
 </head>
+<style>
+    /* body {
+
+        min-height: 100vh;
+        width: 100%;
+        background-image: url(images/background-image.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+
+    } */
+
+
+    .details {
+        height: 5em;
+        width: 90%;
+        background-color: lightpink;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 2em auto;
+        border-radius: 10px;
+    }
+
+    .header {
+        height: 3em;
+        width: 30%;
+        background-color: rgb(230, 148, 148);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1.5em auto;
+        border-radius: 10px;
+    }
+
+    header h2 {
+        text-align: center;
+        margin-bottom: 1em;
+        color: #000;
+        font-weight: 500;
+    }
+</style>
 
 <body>
-    <h2>Candy SHOP</h2>
-    <label for="candyname">Candy Name</label>
-    <input type="text" name="" id="candyname">
-    <label for="description">Description</label>
-    <input type="text" name="" id="description">
-    <label for="price">Price</label>
-    <input type="text" name="" id="price">
-    <label for="quantity">Quantity</label>
-    <input type="text" name="" id="quantity">
-    <button id="additem">ADD ITEM</button>
+    <div class="header">
+        <h2>Candy Management System</h2>
+    </div>
+    <div class="details">
+        <label for="candyname" class="lead fw-bold">Candy Name</label>
+        <input type="text" name="" id="candyname">
+        <label for="description" class="lead fw-bold">Description</label>
+        <input type="text" name="" id="description">
+        <label for="price" class="lead fw-bold">Price</label>
+        <input type="text" name="" id="price">
+        <label for="quantity" class="lead fw-bold">Quantity</label>
+        <input type="text" name="" id="quantity">
+        <button type="button" id="additem" class="btn btn-success">Add Item</button>
+    </div>
+
     <div class="container mt-5">
-        <table class="table-success table-bordered table">
-            <thead class="table-primary">
-                <tr class="table-success table-bordered text-xl-center">
-                    <th class="table-primary" id="candynametable">CandyName</th>
-                    <th class="table-primary">Description</th>
-                    <th class="table-primary">Price</th>
-                    <th class="table-primary">Quantity</th>
-                    <th class="table-primary">Buy one</th>
-                    <th class="table-primary">Buy two</th>
-                    <th class="table-primary">Buy three</th>
+        <table class="table-danger table-bordered table">
+            <thead class="table-danger">
+                <tr class="table-danger table-bordered text-xl-center">
+                    <th class="table-danger" id="candynametable">CandyName</th>
+                    <th class="table-danger">Description</th>
+                    <th class="table-danger">Price</th>
+                    <th class="table-danger">Quantity</th>
+                    <th class="table-danger">Buy one</th>
+                    <th class="table-danger">Buy two</th>
+                    <th class="table-danger">Buy three</th>
                 </tr>
             </thead>
-            <tbody class="table-success table-bordered text-center" id="datatable">
-                
+            <tbody class="table-danger table-bordered text-center" id="datatable">
+
             </tbody>
         </table>
     </div>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
